@@ -1,9 +1,4 @@
-import java.awt.Color
-import java.awt.Component
-import java.awt.Dimension
-import java.awt.FlowLayout
-import java.awt.GridBagConstraints
-import java.awt.GridBagLayout
+import java.awt.*
 import javax.imageio.ImageIO
 import javax.swing.*
 
@@ -26,8 +21,7 @@ class Task3: MFrame("Task3", 400, 400) {
 
         pictureBox.preferredSize = Dimension(250, 250)
 
-        button.alignmentX = Component.CENTER_ALIGNMENT
-        label.alignmentX = Component.CENTER_ALIGNMENT
+        label.font = Font("Serif", Font.BOLD, 20)
 
         comboBox.addActionListener { e ->
             comboBoxCurrentItem = (e.source as JComboBox<*>).selectedItem as String
@@ -35,6 +29,7 @@ class Task3: MFrame("Task3", 400, 400) {
 
         }
 
+        button.background = Color(220, 140, 90)
         button.addActionListener {
             when (comboBoxCurrentItem) {
                 picNameArray[0] -> {

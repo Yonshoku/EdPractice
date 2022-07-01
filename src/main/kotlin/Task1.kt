@@ -20,9 +20,9 @@ class Task1: MFrame("Task 1", 400, 400) {
             label.text = textField.text
         }
 
-        add(textField)
-        add(label)
-        add(button)
+        contentPane.add(textField)
+        contentPane.add(label)
+        contentPane.add(button)
 
         isVisible = true
     }
